@@ -18,7 +18,7 @@ char	ft_check(char value)
 	char	*spec;
 
 	i = 0;
-	spec = "cspdiuxX%"; //for this ft_printf we only check this formats to be desplayed (cspdiuxX%)
+	spec = "cspdiuxX%";
 	while (spec[i])
 	{
 		if (value == spec[i])

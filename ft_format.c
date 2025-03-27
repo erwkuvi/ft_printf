@@ -20,16 +20,16 @@ int	ft_format(va_list args, const char format)
 	if (format == '%')
 		len += ft_printfc('%');
 	else if (format == 'c')
-		len += ft_printfc(va_arg(args, int)); //this proofs if the arguments are single bytes and therefore int datatype will be used
+		len += ft_printfc(va_arg(args, int));
 	else if (format == 's')
-		len += ft_printfs(va_arg(args, char *)); //if the arguments are strings we expect a char pointer to be used
+		len += ft_printfs(va_arg(args, char *));
 	else if (format == 'd' || format == 'i')
-		len += ft_printfd(va_arg(args, int));// ant integer "int" for digits or numerical values
+		len += ft_printfd(va_arg(args, int));
 	else if (format == 'u')
-		len += ft_printfu(va_arg(args, unsigned int)); // for usigned integers
+		len += ft_printfu(va_arg(args, unsigned int));
 	else if (format == 'x' || format == 'X')
-		len += ft_printfx(va_arg(args, unsigned int), (char) format); // for hexadecimal values
+		len += ft_printfx(va_arg(args, unsigned int), (char) format);
 	else if (format == 'p')
-		len += ft_printfp(va_arg(args, unsigned long int)); //for unsigned longs
+		len += ft_printfp(va_arg(args, unsigned long int));
 	return (len);
 }
